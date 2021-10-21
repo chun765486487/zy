@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h5>作业</h5>
+		<hr/>
+		<h6>第七题</h6>
+	    <label>请输入a的值
+		<input type="text" id="aa"/></label><br/>
+		<label>请输入b的值
+		<input type="text" id="bb"/></label>
+		<button>点我</button>
+		<hr/>
+		<script>
+			document.write("<br/>")
+			document.write("<br/>");
+			document.write("第一题");
+			document.write("<br/>");
+			let a = 5;
+			let b = 7;
+			if (a>b){
+				document.write("a大于b");
+			}else if(a<b){
+				document.write("a小于b");
+			}else{
+				document.write("a等于b");
+			}
+			document.write("<hr/>");
+			document.write("第二题");
+			document.write("<br/>");
+			let a1 = 8;
+			if (a1%5==0){
+				document.write("可以被5整除");
+			}else{
+				document.write("不可以被五整除");
+			}
+			document.write("<hr/>");
+			document.write("第三题");
+			document.write("<br/>");
+			for(let Jo=1; Jo<101; Jo++){
+				if (Jo%2==0){
+					document.write(Jo);
+				}else{
+					document.write(" ");
+				}
+			}
+			document.write("<hr/>");
+			document.write("第三题");
+			document.write("<br/>");
+			let Bs = 1;
+			while(Bs<101){
+				if(Bs%7==0){
+					document.write(Bs);
+				}else{
+					document.write(" ");
+				}
+				Bs++;
+			}
+			document.write("<hr/>");
+			document.write("第四题");
+			document.write("<br/>");
+			let BigDa = 3;
+			let BigDa1 = 5;
+			let BigDa2 = 8;
+			if (BigDa>BigDa1 && BigDa>BigDa2){
+				document.write(BigDa);
+			}else if(BigDa1>BigDa && BigDa1>BigDa2){
+				document.write(BigDa1);
+			}else if(BigDa2>BigDa && BigDa2>BigDa1){
+				document.write(BigDa2);
+			}else{
+				document.write(" ");
+			}
+			document.write("<hr/>");
+			document.write("第五题");
+			document.write("<br/>");
+			let r='';
+			let y=''
+			for (let Jo1=1; Jo1<101; Jo1++){
+				if(Jo1%2==0){
+					r=r+Jo1+' ';
+				}else{
+					y=y+Jo1+' ';
+				}
+			}
+			document.write("偶数为:"+r);
+			document.write("<br/>")
+			document.write("奇数为:"+y);
+			
+			document.write("<hr/>");
+			document.write("第六题");
+			document.write("<br/>");
+			let qqq = 0;
+			let www = "";
+			let test=(...num)=>{
+				for(let ff=num.length-1; ff>=0; ff--){
+					if(ff===0){
+						www=www+num[ff];
+					}else{
+						www=www+num[ff]+'+';
+					}
+					qqq+=num[ff];
+				}
+				return www+"="+qqq;
+			}
+			document.write(test(1,2,3,4,5,6))
+			//第七题js
+			let hq = document.querySelector('#aa');
+			let hq1 = document.querySelector('#bb');
+			let hq2 = document.querySelector('button');
+			hq2.onclick=function(){
+				if(hq.value=="" || hq1.value==""){
+					alert("错误信息");
+				}else if(isNaN(Number(hq.value)) || isNaN(Number(hq1.value))){
+					alert("错误信息");
+				}else{
+					if(hq.value>hq1.value){
+						alert("a大于b");
+					}else if(hq.value==hq1.value){
+						alert("a等于b")
+					}
+					else{
+						alert("b大于a");
+					}
+				}
+			}
+ 		</script>
+	</body>
+</html>
